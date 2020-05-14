@@ -115,13 +115,15 @@ class ViewController: UIViewController {
             
             for wallRect in self.wallRectArray {
                 if wallRect.intersects(self.playerView.frame) {
-                    print("Game Over")
+//                    print("Game Over")
+                    self.gameCeack(result: "gameover", message: "壁に当たりました")
                     return
                 }
             }
             
             if self.goalView.frame.intersects(self.playerView.frame) {
-                print("Clear")
+//                print("Clear")
+                self.gameCeack(result: "clear", message: "クリアしました！")
                 return
             }
             
